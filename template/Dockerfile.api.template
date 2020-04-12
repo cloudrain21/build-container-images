@@ -1,0 +1,25 @@
+FROM "$base_image"
+
+WORKDIR    /
+
+RUN        "$pkg_update"
+RUN        "$install_cmd" "$install_pkg"
+
+RUN        wget "$kafka_pkg_url"
+RUN        tar xvzf "$kafka_pkg_name"
+
+RUN        git clone "$server_git_url"
+
+RUN        wget "$go_pkg_url"
+RUN        tar xvzf "$go_pkg_name"
+RUN        tar xvzf "$go_pkg_name"
+RUN        mv go /usr/local
+
+ENV GOPATH "$server_work_dir"
+ENV PATH   "$server_work_dir":$PATH
+
+EXPOSE     8080
+WORKDIR    "$server_work_dir"
+RUN        mkdir -p log
+RUN        go build
+#ENTRYPOINT ["./websamplex"]

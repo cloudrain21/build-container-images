@@ -1,0 +1,16 @@
+FROM       "$base_image"
+
+RUN        "$pkg_update"
+RUN        "$install_cmd" "$install_pkg"
+
+RUN        wget "$kafka_pkg_url"
+RUN        tar xvzf "$kafka_pkg_name"
+
+EXPOSE     2181
+EXPOSE     2888
+EXPOSE     3888
+EXPOSE     9092
+
+WORKDIR    "$work_dir"
+ENTRYPOINT ["./bin/kafka-server-start.sh"]
+CMD        ["./config/server.properties"]

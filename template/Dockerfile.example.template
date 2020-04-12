@@ -1,0 +1,8 @@
+FROM  "$param1"
+
+RUN   "$param2"
+RUN   "$param3" "$param4"
+
+RUN   wget "$param5"
+RUN   tar xvzf "$param6"
+RUN   rm "$param6"

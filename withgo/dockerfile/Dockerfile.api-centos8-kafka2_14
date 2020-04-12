@@ -1,0 +1,25 @@
+FROM docker.io/centos:8
+
+WORKDIR    /
+
+RUN        yum -y update
+RUN        yum -y install wget git golang java-1.8.0-openjdk.x86_64
+
+RUN        wget http://apache.tt.co.kr/kafka/2.4.0/kafka_2.12-2.4.0.tgz
+RUN        tar xvzf kafka_2.12-2.4.0.tgz
+
+RUN        git clone https://github.daumkakao.com/rain-i/websamplex
+
+RUN        wget https://dl.google.com/go/go1.14.linux-amd64.tar.gz
+RUN        tar xvzf go1.14.linux-amd64.tar.gz
+RUN        tar xvzf go1.14.linux-amd64.tar.gz
+RUN        mv go /usr/local
+
+ENV GOPATH /websamplex
+ENV PATH   /websamplex:$PATH
+
+EXPOSE     8080
+WORKDIR    /websamplex
+RUN        mkdir -p log
+RUN        go build
+#ENTRYPOINT ["./websamplex"]

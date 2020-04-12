@@ -1,0 +1,8 @@
+[mydockerfile]
+    template   = Dockerfile.example.template
+    param1     = docker.io/centos:7
+    param2     = yum -y update
+    param3     = yum -y install
+    param4     = wget java-1.8.0-openjdk.x86_64
+    param5     = http://apache.tt.co.kr/kafka/2.4.0/kafka_2.12-2.4.0.tgz
+    param6     = kafka_2.12-2.4.0.tgz

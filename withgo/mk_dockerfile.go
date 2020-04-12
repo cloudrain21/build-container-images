@@ -15,8 +15,8 @@ var (
 	templateDir = "./template/"
 	dockerfilePrefix = "Dockerfile"
 	dockerfileDir = "./dockerfile/"
-	prefix = "\"$"
-	postfix = "\""
+	prefix = `"$`
+	postfix = `"`
 )
 
 func fatalf(err error) {

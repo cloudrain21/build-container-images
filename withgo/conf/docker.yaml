@@ -44,7 +44,7 @@ api-centos7-kafka2_14:
     install_pkg     : wget git golang java-1.8.0-openjdk.x86_64
     kafka_pkg_url   : http://apache.tt.co.kr/kafka/2.4.0/kafka_2.12-2.4.0.tgz
     go_pkg_url      : https://dl.google.com/go/go1.14.linux-amd64.tar.gz
-    server_git_url  : https://github.daumkakao.com/rain-i/websamplex
+    server_git_url  : https://sample.com/rain-i/websamplex
     kafka_pkg_name  : kafka_2.12-2.4.0.tgz
     go_pkg_name     : go1.14.linux-amd64.tar.gz
     server_pkg_name : websamplex.tgz
@@ -58,7 +58,7 @@ api-centos8-kafka2_14:
     install_pkg     : wget git golang java-1.8.0-openjdk.x86_64
     kafka_pkg_url   : http://apache.tt.co.kr/kafka/2.4.0/kafka_2.12-2.4.0.tgz
     go_pkg_url      : https://dl.google.com/go/go1.14.linux-amd64.tar.gz
-    server_git_url  : https://github.daumkakao.com/rain-i/websamplex
+    server_git_url  : https://sample.com/rain-i/websamplex
     kafka_pkg_name  : kafka_2.12-2.4.0.tgz
     go_pkg_name     : go1.14.linux-amd64.tar.gz
     server_pkg_name : websamplex.tgz
